@@ -65,4 +65,15 @@ if ads_file and sales_file:
 else:
     st.info("Please upload both Etsy Ads and Sales CSV files to begin.")
 
+st.subheader("Download Merged Data")
+
+csv = merged.to_csv(index=False).encode('utf-8')
+
+st.download_button(
+    label="📥 Download Merged Data as CSV",
+    data=csv,
+    file_name='etsy_ads_merged.csv',
+    mime='text/csv'
+)
+
 

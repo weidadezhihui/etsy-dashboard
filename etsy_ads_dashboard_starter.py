@@ -52,3 +52,7 @@ if ads_file and sales_file:
 
 else:
     st.info("Please upload both Etsy Ads and Sales CSV files to begin.")
+
+st.set_page_config(...)
+st.markdown("""<style>[data-testid="stToolbar"]{ visibility: hidden; }</style>""", unsafe_allow_html=True)
+

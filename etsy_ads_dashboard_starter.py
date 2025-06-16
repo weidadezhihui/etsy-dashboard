@@ -3,6 +3,18 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
+st.set_page_config(
+    page_title="Etsy Dashboard",
+    page_icon="📊",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+st.markdown(
+    """<style>[data-testid="stToolbar"]{ visibility: hidden; }</style>""",
+    unsafe_allow_html=True
+)
+
 st.title("Etsy Ads & Sales Analytics Dashboard")
 
 st.sidebar.header("Upload Your Data")
@@ -53,6 +65,4 @@ if ads_file and sales_file:
 else:
     st.info("Please upload both Etsy Ads and Sales CSV files to begin.")
 
-st.set_page_config(...)
-st.markdown("""<style>[data-testid="stToolbar"]{ visibility: hidden; }</style>""", unsafe_allow_html=True)
 
